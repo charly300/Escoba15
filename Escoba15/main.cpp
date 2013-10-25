@@ -1,18 +1,18 @@
 #include <iostream>
 #include "card.h"
-
+#include "deck.h"
 
 using namespace std;
 
 int main()
 {
-    Card *aCard = NULL;
+    Deck *aDeck = NULL;
 
-    aCard = new Card;
+    aDeck = new Deck;
 
-    cout << aCard->getValue() << endl;
+    aDeck->printAll();
 
-    delete aCard;
+    delete aDeck;
 
     return 0;
 }

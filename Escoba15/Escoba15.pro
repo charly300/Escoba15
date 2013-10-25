@@ -4,8 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    card.cpp
+    card.cpp \
+    deck.cpp
 
 HEADERS += \
-    card.h
+    card.h \
+    deck.h
 
