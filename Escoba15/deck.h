@@ -8,11 +8,10 @@ class Deck
 public:
     Deck();
     ~Deck();
+    void printAll(void);
 protected:
     Card *deck;
     int cant;
-public:
-    void printAll(void);
 };
 
 #endif // DECK_H

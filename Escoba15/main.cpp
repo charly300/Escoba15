@@ -1,18 +1,17 @@
 #include <iostream>
 #include "card.h"
 #include "deck.h"
+#include "deckSpanish.h"
 
 using namespace std;
 
 int main()
 {
-    Deck *aDeck = NULL;
+    DeckSpanish *aDeck = NULL;
 
-    aDeck = new Deck;
+    aDeck = new DeckSpanish;
 
     aDeck->printAll();
-
-    delete aDeck;
 
     return 0;
 }

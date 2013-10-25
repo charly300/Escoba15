@@ -5,9 +5,11 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     card.cpp \
-    deck.cpp
+    deck.cpp \
+    deckSpanish.cpp
 
 HEADERS += \
     card.h \
-    deck.h
+    deck.h \
+    deckSpanish.h
 
