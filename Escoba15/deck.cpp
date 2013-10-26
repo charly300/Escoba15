@@ -6,8 +6,9 @@ using namespace std;
 
 Deck::Deck()
 {
-    cant = 10;
+    cant = 52;
     deck = new Card[cant];
+    this->fill();
 }
 
 Deck::~Deck()
@@ -16,10 +17,20 @@ Deck::~Deck()
 }
 //////////////
 
-
 void Deck::printAll(void)
 {
     for(int i = 0; i < cant; i++){
-        cout << i << ") " << deck[i].getValue() << endl;
+        cout << i << ") " << deck[i].getSuit() << " - " << deck[i].getNum() << endl;
     }
 }
+///////////////////////
+
+void Deck::fill(void)
+{
+    for(int i = 0; i < cant; i++)
+    {
+        deck[i].setNum(i % 13);
+        deck[i].setSuit(i / 13);
+    }
+}
+

@@ -12,6 +12,7 @@ public:
 protected:
     Card *deck;
     int cant;
+    void fill(void);
 };
 
 #endif // DECK_H
