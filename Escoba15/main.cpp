@@ -15,26 +15,18 @@ enum Suit{
 
 int main()
 {
-    DeckSpanish *aDeck = NULL;
-    Card *aCard = NULL;
+    Deck *aDeck = NULL;
     Player *aPlayer = NULL;
 
-    aDeck = new DeckSpanish;
-
+    aDeck = new Deck;
     aDeck->shuffle();
-    aDeck->printAll();
-
-    cout << Hearts << endl;
-
-    aCard = aDeck->getACard();
-    aCard->print();
-
-    aCard = aDeck->getACard();
-    aCard->print();
-
     aPlayer = new Player;
 
-    cout << "Score: " << aPlayer->getScore() << endl;
+    aPlayer->orderCards(aDeck);
+
+    aDeck->printAll();
+
+    aPlayer->getHandAt(2)->print();
 
     return 0;
 }
