@@ -11,6 +11,7 @@ int main()
 
     aDeck = new DeckSpanish;
 
+    aDeck->shuffle();
     aDeck->printAll();
 
     return 0;

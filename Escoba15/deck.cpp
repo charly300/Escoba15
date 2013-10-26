@@ -1,6 +1,8 @@
 #include "deck.h"
 #include "card.h"
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -34,3 +36,17 @@ void Deck::fill(void)
     }
 }
 
+void Deck::shuffle(void)
+{
+    int j;
+    Card aCardTmp;
+
+    srand(time(NULL));
+
+    for(int i = 0; i < cant; i++){
+        j = rand() % 52;
+        aCardTmp = deck[i];
+        deck[i] = deck[j];
+        deck[j] = aCardTmp;
+    }
+}

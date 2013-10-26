@@ -9,6 +9,7 @@ public:
     Deck();
     ~Deck();
     void printAll(void);
+    void shuffle(void);
 protected:
     Card *deck;
     int cant;
