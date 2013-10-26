@@ -6,11 +6,13 @@ class Card
 public:
     Card();
     int getValue(void);
-    void setValue(int);
+    void setValue(const int);
     int getNum(void);
-    void setNum(int);
+    void setNum(const int);
     int getSuit(void);
-    void setSuit(int);
+    void setSuit(const int);
+    /////////////////////
+    void print(void);
 private:
     int suit;
     int num;

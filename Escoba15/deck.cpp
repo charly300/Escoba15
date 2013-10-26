@@ -8,8 +8,10 @@ using namespace std;
 
 Deck::Deck()
 {
-    cant = 52;
-    deck = new Card[cant];
+    cantNum = 13;
+    cantTotal = 52;
+    pos = 0;
+    deck = new Card[cantTotal];
     this->fill();
 }
 
@@ -21,7 +23,7 @@ Deck::~Deck()
 
 void Deck::printAll(void)
 {
-    for(int i = 0; i < cant; i++){
+    for(int i = 0; i < cantTotal; i++){
         cout << i << ") " << deck[i].getSuit() << " - " << deck[i].getNum() << endl;
     }
 }
@@ -29,10 +31,10 @@ void Deck::printAll(void)
 
 void Deck::fill(void)
 {
-    for(int i = 0; i < cant; i++)
+    for(int i = 0; i < cantTotal; i++)
     {
-        deck[i].setNum(i % 13);
-        deck[i].setSuit(i / 13);
+        deck[i].setNum(i % cantNum);
+        deck[i].setSuit(i / cantNum);
     }
 }
 
@@ -43,10 +45,15 @@ void Deck::shuffle(void)
 
     srand(time(NULL));
 
-    for(int i = 0; i < cant; i++){
-        j = rand() % 52;
+    for(int i = 0; i < cantTotal; i++){
+        j = rand() % cantTotal;
         aCardTmp = deck[i];
         deck[i] = deck[j];
         deck[j] = aCardTmp;
     }
+}
+/////////////////////////////////////
+Card* Deck::getACard(void)
+{
+    return &deck[pos++];
 }
