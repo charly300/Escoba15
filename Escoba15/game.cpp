@@ -11,5 +11,5 @@ Game::Game()
 Game::~Game()
 {
     delete aDeck;
-    delete [] Player;
+    delete [] players;
 }
